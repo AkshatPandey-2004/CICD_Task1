@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Update to fit 4 columns */
+    gap: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+.display {
+    grid-column: span 4;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: right;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.operators {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Button styles */
+button {
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Specific style for the "Clear" button */
+.operators button:nth-child(1) {
+    background-color: #ffcccc;
+    font-weight: bold;
+}
+
+.operators button:nth-child(1):hover {
+    background-color: #ff9999;
+}
